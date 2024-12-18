@@ -1,0 +1,9 @@
+# app/views/ma_tables/export_excel.xlsx.axlsx
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "MaTable List") do |sheet|
+  sheet.add_row ["Name", "Age", "Description"]
+  @ma_tables.each do |ma_table|
+    sheet.add_row [ma_table.name, ma_table.age, ma_table.description]
+  end
+end
+

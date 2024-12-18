@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Export MaTables</title>
+</head>
+<body>
+  <h1>MaTable List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @ma_tables.each do |entry| %>
+        <tr>
+          <td><%= entry.id %></td>
+          <td><%= entry.name %></td>
+          <td><%= entry.age %></td>
+          <td><%= entry.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>
+
